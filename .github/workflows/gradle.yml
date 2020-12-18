@@ -26,8 +26,3 @@ jobs:
       run: ./gradlew setup
     - name: Build with Gradle
       run: ./gradlew build
-  client:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Run MC Client
-       run: ./gradlew client
