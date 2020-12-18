@@ -24,5 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Run Minecraft Client
-      run: ./gradlew client
+  client:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Run MC Client
+       run: ./gradlew client
