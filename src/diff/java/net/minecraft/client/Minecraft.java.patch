@@ -1,0 +1,12 @@
+diff --git a/mc2.java b/mc1.java
+index 5abdee8..bfcbd81 100644
+--- a/mc2.java
++++ b/mc1.java
+@@ -455,6 +455,7 @@ public class Minecraft extends RecursiveEventLoop<Runnable> implements ISnooperI
+         this.keyboardListener = new KeyboardListener(this);
+         this.keyboardListener.setupCallbacks(this.mainWindow.getHandle());
+         RenderSystem.initRenderer(this.gameSettings.glDebugVerbosity, false);
++        ie.getgyps.events.ClientModInitialization.init();
+         this.framebuffer = new Framebuffer(this.mainWindow.getFramebufferWidth(), this.mainWindow.getFramebufferHeight(), true, IS_RUNNING_ON_MAC);
+         this.framebuffer.setFramebufferColor(0.0F, 0.0F, 0.0F, 0.0F);
+         this.resourceManager = new SimpleReloadableResourceManager(ResourcePackType.CLIENT_RESOURCES);
