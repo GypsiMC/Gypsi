@@ -1,0 +1,21 @@
+--- a/Commands.java
++++ b/Commands.java
+@@ -11,6 +11,7 @@ import com.mojang.brigadier.builder.RequiredArgumentBuilder;
+ import com.mojang.brigadier.exceptions.CommandSyntaxException;
+ import com.mojang.brigadier.tree.CommandNode;
+ import com.mojang.brigadier.tree.RootCommandNode;
++import ie.getgyps.registry.GypsiRegistry;
+ import net.minecraft.command.arguments.ArgumentTypes;
+ import net.minecraft.command.arguments.SuggestionProviders;
+ import net.minecraft.command.impl.*;
+@@ -93,6 +94,10 @@ public class Commands
+         TriggerCommand.register(this.dispatcher);
+         WeatherCommand.register(this.dispatcher);
+         WorldBorderCommand.register(this.dispatcher);
++        for(int i=0; i<GypsiRegistry.cmdsrclist.size(); i++) {
++            int finalI = i;
++            this.dispatcher.register(Commands.literal(GypsiRegistry.namelist.get(i)).requires((x) -> x.hasPermissionLevel(GypsiRegistry.permlist.get(finalI))).executes(GypsiRegistry.cmdsrclist.get(i)));
++        }
+         if (SharedConstants.developmentMode)
+         {
+             TestCommand.register(this.dispatcher);

@@ -43,7 +43,6 @@ dependencies {
 //    from a maven repo
 //    shade 'package-here'
 //    compile 'package-here'
-    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 }
 
 project(':mcp') {
@@ -72,6 +71,8 @@ jar {
 }
 
 task runclient(type: JavaExec) {
+    inputs.dir("src/main/java")
+    outputs.file("build/libs/GypsiClient1162-1.0.0.jar")
     group = "MCP"
     description = "Runs the client"
     classpath sourceSets.main.runtimeClasspath

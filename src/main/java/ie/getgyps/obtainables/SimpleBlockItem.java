@@ -26,7 +26,7 @@ public class SimpleBlockItem {
         blockItem = blockItemIn;
         return this;
     }
-    public SimpleBlockItem register(String modid, String itemName) {
-        return this.fromBlockItem(GypsiRegistry.register(modid+":"+itemName, this, block));
+    public SimpleBlockItem register(String modid, String blockItemName) {
+        return this.fromBlockItem(GypsiRegistry.register(modid+":"+blockItemName, this, block));
     }
 }
