@@ -1,5 +1,6 @@
 <p align="center">
 	<img src="https://i.ibb.co/NLj1pBp/gypsimc-white.png" width="750" />
+	<br />
 	<img src="https://github.com/GypsiMC/Gypsi/workflows/Gypsgradle/badge.svg?branch=master" width="128" />
 </p>
 <h1>What is Gypsi?</h1>
