@@ -1,7 +1,7 @@
 .gradle
 build/
 
-# Source code
+#Source code
 src/main/java/net/*
 src/main/java/com/*
 
